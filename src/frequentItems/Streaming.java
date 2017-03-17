@@ -20,15 +20,20 @@ public class Streaming{
 	
 	public static void main(String[] args) throws IOException
 	{
-		
+		/*
 		MisraGries M1 = new MisraGries("txt/S1.txt");
 		int k=10;
 		M1.Run(k-1);
 		
 		MisraGries M2 = new MisraGries("txt/S2.txt");
 		M2.Run(k-1);
-		//System.out.println("set size of 2-Grams:"+G1D1.size()+" from file D1");
-		
+		*/
+		char[] query = {'a','b','c'};
+		int k=10;
+		CountMinSketch CM1 = new CountMinSketch("txt/S1.txt");
+		CM1.CountMin(5, k ,query);
+		CountMinSketch CM2 = new CountMinSketch("txt/S2.txt");
+		CM2.CountMin(5, k ,query);
 		
 	}
 
